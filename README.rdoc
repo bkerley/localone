@@ -1,6 +1,33 @@
 = localone
 
-Description goes here.
+Local One adds Object#with and Kernel.let to help you use fewer local
+variables.
+
+== Wha?
+
+    %w{ doug bob }.with do |a|
+      assert_equal "doug and bob", a.join(' and ')
+    end
+    
+    assert_equal 'abcdef', let(:a=>'abc', :b=>'def'){ [a, b].join }
+
+== Why is that better than assigning the variables?
+
+Discourages redefining variables leading to a more functional
+style, looks kind of cool.
+
+== What does Local One mean?
+
+Local because it deals with local variables (like you would deal with a
+rat problem).
+
+Local One because http://www.flickr.com/photos/phirleh/3873243860/
+
+== Does it work on my version of Ruby?
+
+It has been tested on 1.8.6, 1.8.7, and 1.9.1 successfully. I'm having
+jruby + rvm problems right now, so not sure there.  Can't get jeweler
+or bundler installed on macruby + jvm.  Verdict: probably :)
 
 == Note on Patches/Pull Requests
  

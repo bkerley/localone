@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "localone"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A couple useful functions to reduce local variable usage.}
+    gem.description = %Q{Add Object#with and Kernel.let to your repertoire to crack down on local variables.}
     gem.email = "bkerley@brycekerley.net"
     gem.homepage = "http://github.com/bkerley/localone"
     gem.authors = ["Bryce Kerley"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_development_dependency "shoulda"
+    gem.add_dependency 'blankslate'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
